@@ -119,6 +119,7 @@ export function findMultipleMatches(
 
 /**
  * Get color suggestions based on color family
+ * NOW USED in ColorSuggestions component to show related colors
  */
 export function getColorFamilySuggestions(userColor: string): ColorMatch[] {
 	const flatColors = getTailwindColors();
@@ -137,5 +138,5 @@ export function getColorFamilySuggestions(userColor: string): ColorMatch[] {
 		});
 	});
 
-	return matches.sort((a, b) => a.distance - b.distance).slice(0, 10);
+	return matches.sort((a, b) => a.distance - b.distance).slice(0, 12);
 }
